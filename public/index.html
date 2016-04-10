@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- binds angular app to html tag -->
+<html ng-app="addrBook">
+	<head>
+	<!-- loads in all the files the app needs -->
+	<link rel="stylesheet" href="main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	<script src="ang.js"></script>
+	<script src="jQuery.js"></script>
+	</head>
+
+<!-- binds angular controller to body -->
+<body ng-controller="addrCtrl">
+	<!-- div wrapper for top section -->
+	<div id="top">
+		<!-- div for left side of top section -->
+		<div id="left-panel">
+		
+			
+			
+			<!-- div that appears for table header after left-side animation -->
+			<div id="second_th">
+				<span>Th</span>
+			</div>
+			
+			<!-- div that appears for odd table rows after left-side animation -->
+			<div id="second_odd">
+				<span>Od</span>
+			</div>
+			
+			<!-- div that appears for even table rows after left-side animation -->
+			<div id="second_evn">
+				<span>Ev</span>
+			</div>
+			
+			<!-- div for color selection of table header -->
+			<div id="th_color">
+				<span id="thTxt">Set table header</span>
+				<br>
+				<!-- start of colors for the table header -->
+				<button id="grn">
+				<button id="red">
+				<button id="blu">
+				<button id="ppl">
+				<button id="pnk">
+				<button id="org">
+				<button id="ylow">
+				<!-- end of colors for table header -->
+			</div>
+			
+			<!-- div for color selection for odd rows -->
+			<div id="odd_color">
+				<span id="oddLabel">set table row(s) (odd)</span>
+				<br>
+				<!-- start of colors for odd table rows -->
+				<button id="ogrn">
+				<button id="ored">
+				<button id="oblu">
+				<button id="oppl">
+				<button id="opnk">
+				<button id="oorg">
+				<button id="oylow">
+				<!-- end of colors for odd table rows -->
+			</div>
+
+			<!-- div for color selection for even table rows -->
+			<div id="even_color">
+				<span id="evenLabel">set table row(s) (even)</span>
+				<br>
+				<!-- start of colors for even table rows -->
+				<button id="egrn">
+				<button id="ered">
+				<button id="eblu">
+				<button id="eppl">
+				<button id="epnk">
+				<button id="eorg">
+				<button id="eylow">
+				<!-- end of colors for even table rows -->
+			</div>
+			
+			<!-- div for limit rows seen option -->
+			<div id="limitRow">
+				<span id="limitLabel">Limit how many row(s) you see:</span>
+				<select ng-options="num for num in numbers" ng-model="curNum">
+				</select>
+			</div>
+
+			<br>
+			
+			<!-- div for order by option -->
+			<div id="ordRow">
+				<span id="orderLabel">Order by a specific column:</span>
+				<select ng-options="row for row in rows" ng-model="rowOrder">
+				</select>
+			</div>
+			
+		<!-- end of left-panel div -->
+		</div>
+		
+		<!-- div that contains the form to create a contact -->
+			<div id="main">
+				<h2>Enter contact information here</h2>
+			<form name="contactForm" id="contactForm" ng-submit="submitForm(contactForm.$valid)" novalidate>
+				<span id="nameLabel">Name:</span><input type="text" id="name" ng-model="addresses.name" required />
+				<span id="emailLabel">E-Mail:</span><input type="email" id="email" ng-model="addresses.email" required />
+				<br>
+				<span id="stateLabel">State:</span><input type="text" id="state" ng-model="addresses.state" required />
+				<span id="phoneLabel">Phone:</span><input type="text" id="phone" ng-model="addresses.phone" required />
+				<br>
+				<input type="submit" id="subbtn" value="Save Your Contact!" ng-disabled="ourForm.$invalid" ng-click="createAddr()" />
+			</form>
+			</div>	
+		
+
+	<!-- end of div for top section -->
+	</div>
+	
+	<!-- prent div for our table div -->
+	<div id="tableArea">
+	
+		<!-- div that contains our table -->
+		<div id="addrTable">
+		<table>
+			<!-- table row for our table head -->
+			<tr>
+				<th>X</th>
+				<th>Name:</th>
+				<th>Email:</th>
+				<th>State:</th>
+				<th>Phone:</th>
+			</tr>
+			<!-- table row for the body of the table -->
+			<tr ng-repeat="x in addr | limitTo: curNum | orderBy : rowOrder">
+				<td><span><input id="del" type="checkbox" ng-click="deleteAddr(x._id)"></span></td>
+				<td>{{ x.name }}</td>
+				<td>{{ x.email }}</td>
+				<td>{{ x.state }}</td>
+				<td>{{ x.phone }}</td>
+			</tr>
+		</table>
+
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+body {
+	background: linear-gradient(to right, black, white);
+}
+
+/* div wrapper for top part of page */
+#top {
+	background: linear-gradient(to bottom right, black, white);
+	margin-top:-10px;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+
+/* div tag that contains the form for creating contacts */
+#main {
+	position: relative;
+	border: 7px double #099FFF;
+	float: right;
+	margin-top: -290px;
+	margin-left: 200px;
+	margin-bottom: 10px;
+}
+
+/* label for name field */
+#nameLabel {
+	margin-left: 1px;
+}
+
+/* label for email field */
+#emailLabel {
+	margin-left: 18px;
+}
+
+/* label for phone field */
+#phoneLabel {
+	padding-left: 24px;
+}
+
+/* input for state field...used in here for alignment of fields */
+#state {
+	margin-left:7px;
+}
+
+/* submit button of the form */
+#subbtn {
+	margin-top: 5px;
+	margin-left: 150px;
+	margin-bottom: 5px;
+}
+
+
+
+/* parent div for left-side color and selection panel */
+#left-panel {
+	width: 300px;
+	height: 262px;
+}
+
+/* the div that contains the "thTxt" and color options for the table header */
+#th_color {
+	border: 7px groove #39FF14;
+	width: 150px;
+	height: 43px;
+}
+
+/* label for the table head color selection */
+#thTxt {
+	margin-top: -30px;
+	color: white;
+}
+
+/* start of colors for the table header */
+#grn {
+	background-color: #39FF14;
+	border-color: #39FF14;
+	height: 15px;
+	width: 10px;
+}
+#red {
+	background-color: #FF0000;
+	border-color: #FF0000;
+	height: 15px;
+	width: 10px;
+}
+#blu {
+	background-color: #099FFF;
+	border-color: #099FFF;
+	height: 15px;
+	width: 10px;	
+}
+#ppl {
+	background-color: #9900FF;
+	border-color: #9900FF;
+	height: 15px;
+	width: 10px;	
+
+}
+#pnk {
+	background-color: #FF00CC;
+	border-color: #FF00CC;
+	height: 15px;
+	width: 10px;
+}
+#org {
+	background-color: #FF6600;
+	border-color: #FF6600;
+	height: 15px;
+	width: 10px;
+}
+#ylow {
+	background-color: #F2EA02;
+	border-color: #F2EA02;
+	height: 15px;
+	width: 10px;
+}
+/* end of colors for table header */
+
+/* div that contains color selection for odd table rows */
+#odd_color {
+	position: relative;
+	border: 7px groove #FF0000;
+	width: 150px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* label for color selection for odd rows */
+#oddLabel {
+	color: white;
+}
+
+/* start of colors for odd table rows */
+#ogrn {
+	background-color: #39FF14;
+	border-color: #39FF14;
+	height: 15px;
+	width: 10px;
+}
+#ored {
+	background-color: #FF0000;
+	border-color: #FF0000;
+	height: 15px;
+	width: 10px;
+}
+#oblu {
+	background-color: #099FFF;
+	border-color: #099FFF;
+	height: 15px;
+	width: 10px;	
+}
+#oppl {
+	background-color: #9900FF;
+	border-color: #9900FF;
+	height: 15px;
+	width: 10px;	
+
+}
+#opnk {
+	background-color: #FF00CC;
+	border-color: #FF00CC;
+	height: 15px;
+	width: 10px;
+}
+#oorg {
+	background-color: #FF6600;
+	border-color: #FF6600;
+	height: 15px;
+	width: 10px;
+}
+#oylow {
+	background-color: #F2EA02;
+	border-color: #F2EA02;
+	height: 15px;
+	width: 10px;
+}
+/* end of colors for odd table rows */
+
+/* div that contains color options for even table rows */
+#even_color {
+	position: relative;
+	border: 7px groove #9900FF;
+	width: 150px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* label for color selection of even table rows */
+#evenLabel {
+	color: white;
+}
+
+/* start of colors for even table rows */
+#egrn {
+	background-color: #39FF14;
+	border-color: #39FF14;
+	height: 15px;
+	width: 10px;
+}
+#ered {
+	background-color: #FF0000;
+	border-color: #FF0000;
+	height: 15px;
+	width: 10px;
+}
+#eblu {
+	background-color: #099FFF;
+	border-color: #099FFF;
+	height: 15px;
+	width: 10px;	
+}
+#eppl {
+	background-color: #9900FF;
+	border-color: #9900FF;
+	height: 15px;
+	width: 10px;	
+}
+#epnk {
+	background-color: #FF00CC;
+	border-color: #FF00CC;
+	height: 15px;
+	width: 10px;
+}
+#eorg {
+	background-color: #FF6600;
+	border-color: #FF6600;
+	height: 15px;
+	width: 10px;
+}
+#eylow {
+	background-color: #F2EA02;
+	border-color: #F2EA02;
+	height: 15px;
+	width: 10px;
+}
+/* end of colors for even table rows */
+
+/* div that contains the limit rows seen option */
+#limitRow {
+	position: relative;
+}
+/* label for the limit rows seen option */
+#limitLabel {
+	color: white;
+}
+
+/* div that contains the order by option */
+#ordRow {
+	position: relative;
+	margin-top: -20px;
+}
+
+/* label for order by option */
+#orderLabel {
+	color: white;
+}
+
+/*div that appears after left-side panel animation...represents table header */
+#second_th {
+	border: 7px groove #39FF14;
+	color: white;
+	width: 20px;
+	height: 20px;
+}
+
+/*div that appears after left-side panel animation...represents odd table rows */
+#second_odd {
+	position: relative;
+	border: 7px groove #FF0000;
+	color: white;
+	width: 20px;
+	height: 20px;
+	margin-top: -34px;
+	right: -34px;
+}
+
+/*div that appears after left-side panel animation...represents even table rows */
+#second_evn {
+	position: relative;
+	border: 7px groove #9900FF;
+	color: white;
+	width: 20px;
+	height: 20px;
+	margin-top: -34px;
+	right: -67px;
+	
+}
+
+
+
+/*  parent div of the table */
+#tableArea {
+	margin-top: -40px;
+	height:256px;
+	width:1046px;
+	margin-left:-20px;
+	overflow-y: auto;
+	background: linear-gradient(to bottom left, #39FF14, #00FFFF);
+}
+
+/* div that contains the table */
+#addrTable {
+	margin-top: 10px;
+	margin-left: 260px;
+	width: 70px;
+}
+
+/* sets inital background color of the table header */
+th {
+	background-color: #39FF14;
+}
+
+/* sets the inital background color of the odd table rows */
+tr:nth-child(odd){background-color: #9900FF}
+
+/* sets inital background color of the even table rows */
+tr:nth-child(even){background-color: #FF0000}
